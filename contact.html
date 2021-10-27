@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Napredne tehnike projektiranja web servisa</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="Opis stranice" />
+    <meta name="keywords" content="ključna riječ1, ključna riječ2" />
+    <meta name="author" content="Kristijan Milanović" />
+    <meta name="viewport" content="width=device-width, inital-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  
+  </head>
+  <body>
+    <header>
+      <div class="hero-image"></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Contact</h1>
+      <script>
+        function initMap() {
+          const uluru = { lat: 45.813092, lng: 15.977201 };
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: uluru,
+          });
+          const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+          });
+        }
+      </script>
+      <div id="map"></div>
+      <div class="form">
+        <form action="">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your first name">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name">
+      
+          <label for="country">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email">
+        
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </main>
+    <p>
+      Social media:<br />
+      <a
+        href="https://www.facebook.com/profile.php?id=100043504936152"
+        target="_blank"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="https://www.instagram.com/milanovickristijan/" target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+    </p>
+    <footer>
+      <p>
+        Copyright © 2021 Kristijan Milanović
+        <a href="https://github.com/kmilanovic" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+      </p>
+    </footer>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaOn9JVgWPTrLdysaDP8ohX3DzcHCxzOk&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html>

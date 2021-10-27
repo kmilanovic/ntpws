@@ -102,3 +102,48 @@ footer p {
 article h1 {
   padding: 0;
 }
+
+#map {
+  height: 400px;
+  width: auto;
+  margin: 1em;
+}
+
+input {
+  width: 500px;
+  padding: 1em 1em;
+  margin: 1em 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  width: 500px;
+  background-color: #f00000;
+  color: white;
+  padding: 1em 1em;
+  margin: 1em 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #f97272;
+}
+
+.form
+{
+  margin: 1em;
+}
+
+video
+{
+  margin: 0 0.5em 0 1em;
+  float: left;
+  width: 320px;
+  height: auto;
+}
