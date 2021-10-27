@@ -1,83 +1,105 @@
-body, html 
-{
-	margin: 0;
+body,
+html {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-header 
-{
-	width: 100%;
+header {
+  width: 100%;
 }
-.hero-image 
-{
-	background-image: url("../img/img1.jpg");
-	background-position: center center;
-  	background-repeat: no-repeat;
-  	background-size: cover;
-	height: 200px;
+.hero-image {
+  background-image: url("../img/logo.png");
+  background-color: white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 400px;
 }
-nav
-{
-	width: 100%;
+nav {
+  width: 100%;
 }
-nav ul 
-{
-	list-style-type: none;
-	margin: 0;
-	overflow: auto;
-	background-color: rgb(184, 54, 54);
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: auto;
+  background-color: #f00000;
 }
-nav li 
-{
-	float: left;
+nav li {
+  float: left;
 }
-nav li a 
-{
-	display: flex;
-	color: white;
-	padding: 14px 16px;
-	text-decoration: none;
+nav li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
 }
-h1
-{
-    padding: 0.5em;
+h1,
+h2 {
+  margin: 16px;
 }
-p
-{
-    margin: 0.5em;
+p {
+  margin: 1em;
 }
 figure {
-	padding: 0.5em;
-	margin: 0 1em 0.5em 1em;
-	float: left;
-	width: 35%;
+  padding: 0.5em;
+  margin: 0 0.5em 0 1em;
+  float: left;
+  width: 35%;
+  border: 2px solid #ccc;
 }
 figcaption {
-	text-align: center;
+  text-align: center;
 }
-img 
-{
-    width: 100%;
+img {
+  width: 100%;
 }
-footer
-{
-	background-color: rgb(165, 42, 42);
+hr {
+  margin: 1em;
 }
-footer p
-{
-	color: white;
-	text-align: center;
+footer {
+  background-color: #f00000;
 }
-.news 
-{
-	padding: 10px;
+footer p {
+  color: white;
+  text-align: center;
 }
-.news-thumbnail 
-{
-	width: auto;
-	height: 110px;
-	float: left;
-	padding: 10px
-} 
+.news {
+  margin: 0 0.5em 0 0.5em;
+}
+.news img {
+  width: 200px;
+  height: 110px;
+  float: left;
+  margin: 0 0.5em 0 0.5em;
+}
 .news h2 {
-	  margin: 1.5em 0.7em;
-  }
+  margin: 0em 0.7em;
+}
 
+.news hr {
+  margin: 2em 0.5em 1em 0.5em;
+}
+
+.gallery {
+  margin: 1em;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  display: inline-block;
+  width: 180px;
+}
+
+.gallery:hover {
+  border: 1px solid #777;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  padding: 0.5em;
+  text-align: center;
+}
+
+article h1 {
+  padding: 0;
+}
