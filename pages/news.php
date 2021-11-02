@@ -1,68 +1,36 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Napredne tehnike projektiranja web servisa</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="Opis stranice" />
-    <meta name="keywords" content="ključna riječ1, ključna riječ2" />
-    <meta name="author" content="Kristijan Milanović" />
-    <meta name="viewport" content="width=device-width, inital-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  </head>
-  <body>
-    <header>
-      <div class="hero-image"></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
       <h1>News</h1>
         <div class="news"> 
-                <a href="article1.html"><img class="news-thumbnail" src="img/news1.jpg"></a>
+                <a href="article1.html"><img class="news-thumbnail" src="assets/img/news1.jpg"></a>
                 <h2>Match report: Arsenal 2-0 Leeds</h2>
                 <p>Arsenal booked their place in the quarter-finals of the Carabao Cup after second half goals from Calum Chambers and Eddie Nketiah saw off the challenge of Leeds. <a href="article1.html">Read more...</a></p>
                 <p>26th October 2021</p>
                 <hr>
         
-                <a href="article2.html"><img class="news-thumbnail" src="img/news2_3.jpg"></a>
+                <a href="article2.html"><img class="news-thumbnail" src="assets/img/news2_3.jpg"></a>
                 <h2>It was academy photocall day at London Colney on Monday!</h2>
                 <p>Under-18s and under-23s posed for their official team photos for the 2021/22 season. <a href="article2.html">Read more...</a></p>
                 <p>26th October 2021</p>
                 <hr>
                
-                <a href="article3.html"><img class="news-thumbnail" src="img/news3_1.jpg"></a>
+                <a href="article3.html"><img class="news-thumbnail" src="assets/img/news3_1.jpg"></a>
                 <h2>Arteta on Chambers, Nketiah, White's fitness</h2>
                 <p>Afterwards Arsenal manager faced the media to discuss the match. Read on for a full transcript <a href="article3.html">Read more...</a></p>
                 <p>20th October 2021</p>
                 <hr>
 
-                <a href="article4.html"><img class="news-thumbnail" src="img/news4_1.jpg"></a>
+                <a href="article4.html"><img class="news-thumbnail" src="assets/img/news4_1.jpg"></a>
                 <h2>Arsenal Supporting Supporters: JNF</h2>
                 <p>Inspired by player-business partnerships of yesteryear and kicked off by local pub, The Tollington and Rob Holding, this is the third instalment in a series <a href="article4.html">Read more...</a></p>
                 <p>20th October 2021</p>
                 <hr>
 
-                <a href="article5.html"><img class="news-thumbnail" src="img/news5_1.jpg"></a>
+                <a href="article5.html"><img class="news-thumbnail" src="assets/img/news5_1.jpg"></a>
                 <h2>Heath - It's easy with ‘cerebral’ Miedema</h2>
                 <p>The USA international combined wonderfully with Vivianne Miedema to make it 2-0 on the stroke of half-time, so it’s no surprise that she’s a huge admirer of the ‘GOAT’. <a href="article5.html">Read more...</a></p>
                 <p>20th October 2021</p>
                 <hr>
         </div>
-    </main>
     <p>Social media:<br>
         <a href="https://www.facebook.com/profile.php?id=100043504936152" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/milanovickristijan/" target="_blank"><i class="fab fa-instagram"></i></a>
     </p>
-    <footer>
-        <p>Copyright © 2021 Kristijan Milanović <a href="https://github.com/kmilanovic" target="_blank"><i class="fab fa-github"></i></a></p>
-    </footer>
-  </body>
-</html>

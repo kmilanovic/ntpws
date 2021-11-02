@@ -149,3 +149,11 @@ video
   width: 320px;
   height: auto;
 }
+
+iframe
+{
+  display: block;
+  border: none;
+  height: 50vh;
+  width: 100vw;
+}

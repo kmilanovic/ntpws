@@ -1,36 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Napredne tehnike projektiranja web servisa</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="Opis stranice" />
-    <meta name="keywords" content="ključna riječ1, ključna riječ2" />
-    <meta name="author" content="Kristijan Milanović" />
-    <meta name="viewport" content="width=device-width, inital-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="hero-image"></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
+
       <h1>About us</h1>
 
       <video controls>
-        <source src="video/Arsenal.mp4" type="video/mp4">
+        <source src="assets/video/Arsenal.mp4" type="video/mp4">
       </video>
 
        <p>
@@ -68,15 +40,3 @@
         successes, winning the London Charity Cup, the Kent Senior Cup and the
         Kent Junior Cup.
       </p>
-
-    </main>
-    <footer>
-      <p>
-        Copyright © 2021 Kristijan Milanović
-        <a href="https://github.com/kmilanovic" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-      </p>
-    </footer>
-  </body>
-</html>
