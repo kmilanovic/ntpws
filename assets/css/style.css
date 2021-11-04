@@ -17,12 +17,16 @@ nav {
 }
 nav ul {
   list-style-type: none;
-  margin: 0;
   overflow: auto;
   background-color: #f00000;
+  position: relative;
 }
 nav li {
   float: left;
+}
+
+nav li:hover {
+  background-color: #db0007;
 }
 nav li a {
   display: block;
@@ -39,12 +43,15 @@ p {
 }
 #mainFigure {
   padding: 0.5em;
-  margin: 0 0.5em 0 1em;
+  margin: 0 0.5em 0 0.5em;
   float: left;
   width: 35%;
-  border: 2px solid #ccc;
 }
 figcaption {
+  background-color: #f00000;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
   text-align: center;
 }
 img {
@@ -77,41 +84,39 @@ footer p {
   margin: 2em 0.5em 1em 0.5em;
 }
 
-#galleryFigure
-{
-  margin: 1em;
-  padding: 0.5em;
-  border: 1px solid #ccc;
+.image {
   display: inline-block;
-  width: 180px;
+  transition: all 0.8s;
 }
 
-#galleryFigure:hover
-{
-  border: 1px solid #777;
+.image:hover {
+  transform: scale(1.1);
 }
 
-#galleryFigure img
-{
+.image:hover figcaption {
+  opacity: 1;
+  transition: opacity 0.8s;
+}
+
+#galleryFigure {
+  margin: 2em;
+  display: inline-block;
+  width: 300px;
+}
+
+#galleryFigure img {
   width: 100%;
-  height: auto;
+  height: 200px;
+
 }
 
 article h1 {
   padding: 0;
 }
-
-#map {
-  height: 400px;
-  width: auto;
-  margin: 1em;
-}
-
-.form
-{
+.form {
   margin: 1em;
   position: relative;
-  max-width:500px;
+  max-width: 500px;
 }
 
 input {
@@ -125,8 +130,7 @@ input {
   box-sizing: border-box;
 }
 
-
-input[type=submit] {
+input[type="submit"] {
   width: 100%;
   max-width: 500px;
   background-color: #f00000;
@@ -138,22 +142,35 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
-  background-color: #f97272;
+input[type="submit"]:hover {
+  background-color: #db0007;
 }
 
-video
-{
+.select {
+  width: 100%;
+  max-width: 500px;
+  padding: 1em 1em;
+  margin: 1em 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.countries {
+  width: 100%;
+  border: 0px;
+  outline: none;
+}
+
+video {
   margin: 0 0.5em 0 1em;
   float: left;
-  width: 320px;
+  width: 40%;
   height: auto;
 }
 
-iframe
-{
-  display: block;
+iframe {
   border: none;
   height: 50vh;
-  width: 100vw;
+  width: 100%;
 }
