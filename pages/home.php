@@ -1,12 +1,14 @@
+<?php
+
+print '
 <h1>Arsenal F.C.</h1>
 
-<figure id="mainFigure">
-  <img
-    src="assets/img/figure.jpg"
-    alt="Royal Arsenals squad of the 1888–89 season"
-  />
-  <figcaption>Royal Arsenals squad of the 1888–89 season</figcaption>
-</figure>
+  <figure id="mainFigure">
+    <img src="assets/img/figure.jpg" alt="Royal Arsenals squad of the 1888–89 season">
+    <figcaption>
+      Royal Arsenals squad of the 1888–89 season
+    </figcaption>
+  </figure>
 
 <p>
   In late 1886, a gaggle of workers from the Woolwich Arsenal Armament Factory
@@ -68,12 +70,7 @@
 </p>
 <p>
   Social media:<br />
-  <a
-    href="https://www.facebook.com/profile.php?id=100043504936152"
-    target="_blank"
-    ><i class="fab fa-facebook-f"></i
-  ></a>
-  <a href="https://www.instagram.com/milanovickristijan/" target="_blank"
-    ><i class="fab fa-instagram"></i
-  ></a>
-</p>
+  <a href="https://www.facebook.com/profile.php?id=100043504936152" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/milanovickristijan/" target="_blank"><i class="fab fa-instagram"></i></a>
+</p>';
+?>

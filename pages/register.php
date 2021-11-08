@@ -1,6 +1,13 @@
+<?php
 
-<div class="form">
-        <form action="">
+print '
+<h1>Register</h1>';
+
+if ($_POST['_action_'] == FALSE) {
+  print '
+      <div class="form">
+        <form action="" method="POST">
+        <input type="hidden" id="_action_" name="_action_" value="TRUE">
           <label for="fname">First Name</label>
           <input type="text" id="fname" name="firstname" placeholder="Your first name" />
 
@@ -13,26 +20,67 @@
 
           <label for="country">Country</label>
           <div class="select">
-            <select class="countries">
-            <option value="">Select country</option>
-            <option value="Croatia">Croatia</option>
-            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-            <option value="Serbia">Serbia</option>
-            </select>
-          </div>
+            <select class="countries" name="country">
+              <option>Select country</option>';
+              $query = "SELECT country_name FROM countries";
+              $records = mysqli_query($conn, $query);  
 
-          <label for="city">City</label>
-          <input type="text" id="city" name="city" placeholder="City" />
+              while($data = mysqli_fetch_array($records))
+              {
+                  echo "<option value='". $data['country_name'] ."'>" .$data['country_name'] ."</option>"; 
+              }
+              mysqli_close($conn);  
+          print '
+          </select>
+        </div>
 
-          <label for="street">Street</label>
-          <input type="text" id="street" name="street" placeholder="Street" />
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" placeholder="City" />
 
-          <label for="dob">Street</label>
-          <input type="date" id="dob" name="dob" placeholder="DOB" />
+      <label for="street">Street</label>
+      <input type="text" id="street" name="street" placeholder="Street" />
 
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" placeholder="Password" />
+      <label for="dob">Date of birth</label>
+      <input type="date" id="dob" name="dob" placeholder="DOB" />
 
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
+      <label for="username">Username</label>
+			<input type="text" id="username" name="username" placeholder="Username"/>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" />
+
+      <input type="submit" value="Submit" />
+    </form>';
+  }
+  else if ($_POST['_action_'] == TRUE) 
+  {
+
+    $query  = "SELECT * FROM users";
+    $query .= " WHERE email='" .  $_POST['email'] . "'";
+    $query .= " OR username='" .  $_POST['username'] . "'";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+    if ($row['email'] == '' || $row['username'] == '') {
+      # password_hash https://secure.php.net/manual/en/function.password-hash.php
+      # password_hash() creates a new password hash using a strong one-way hashing algorithm
+      $pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 12]);
+      
+      $query  = "INSERT INTO users (firstname, lastname, email, country, city, street, dob, username, password)";
+      $query .= " VALUES ('" . $_POST['firstname'] . "', '" . $_POST['lastname'] . "', '" . $_POST['email'] . "', '" . $_POST['country'] . "', '" . $_POST['city'] . "', '" . $_POST['street'] . "', '" . $_POST['dob'] . "', '" . $_POST['username'] . "', '" . $pass_hash . "')";
+      $result = mysqli_query($conn, $query);
+      
+      # ucfirst() — Make a string's first character uppercase
+      # strtolower() - Make a string lowercase
+      echo '<p>' . $_POST['firstname'] . ' ' .  $_POST['lastname'] . ', thank you for registration </p>
+      <hr>';
+    }
+    else 
+    {
+      echo '<p>User with this email or username already exist!</p>';
+    }
+  }
+
+print '
+</div>';
+?>
