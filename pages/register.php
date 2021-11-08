@@ -62,7 +62,6 @@ if ($_POST['_action_'] == FALSE) {
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
     if ($row['email'] == '' || $row['username'] == '') {
-      # password_hash https://secure.php.net/manual/en/function.password-hash.php
       # password_hash() creates a new password hash using a strong one-way hashing algorithm
       $pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 12]);
       
