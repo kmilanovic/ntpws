@@ -9,19 +9,19 @@ if ($_POST['_action_'] == FALSE) {
         <form action="" method="POST">
         <input type="hidden" id="_action_" name="_action_" value="TRUE">
           <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your first name" />
+          <input type="text" id="fname" name="firstname" placeholder="Your first name" required/>
 
           <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name" />
+          <input type="text" id="lname" name="lastname" placeholder="Your last name" required/>
 
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your email" />
+          <input type="email" id="email" name="email" placeholder="Your email" required/>
 
 
           <label for="country">Country</label>
           <div class="select">
-            <select class="countries" name="country">
-              <option>Select country</option>';
+            <select class="countries" name="country" required>
+              <option value="">Select country</option>';
               $query = "SELECT country_name FROM countries";
               $records = mysqli_query($conn, $query);  
 
@@ -35,19 +35,19 @@ if ($_POST['_action_'] == FALSE) {
         </div>
 
       <label for="city">City</label>
-      <input type="text" id="city" name="city" placeholder="City" />
+      <input type="text" id="city" name="city" placeholder="City" required/>
 
       <label for="street">Street</label>
-      <input type="text" id="street" name="street" placeholder="Street" />
+      <input type="text" id="street" name="street" placeholder="Street" required/>
 
       <label for="dob">Date of birth</label>
-      <input type="date" id="dob" name="dob" placeholder="DOB" />
+      <input type="date" id="dob" name="dob" placeholder="DOB" required/>
 
       <label for="username">Username</label>
-			<input type="text" id="username" name="username" placeholder="Username"/>
+			<input type="text" id="username" name="username" placeholder="Username" required/>
 
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Password" />
+      <input type="password" id="password" name="password" placeholder="Password" required/>
 
       <input type="submit" value="Submit" />
     </form>';
