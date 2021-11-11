@@ -1,14 +1,9 @@
 <?php
+session_start();
 
 include('config/connection.php');
 
-session_start();
-
-if(isset($_GET['menu'])) { $menu   = (int)$_GET['menu']; }
-	if(isset($_GET['action'])) { $action   = (int)$_GET['action']; }
-
 if(!isset($_POST['_action_']))  { $_POST['_action_'] = FALSE;  }
-
 
 print '
 <!DOCTYPE html>
@@ -29,6 +24,12 @@ print '
 include('includes/header.php');
 print '    
 <main>';
+
+if (isset($_SESSION['message'])) {
+    print $_SESSION['message'];
+    unset($_SESSION['message']);
+}
+
 if (!isset($_GET['menu']) || $_GET['menu'] == 'home') {
     include("pages/home.php");
 } else if ($_GET['menu'] == 'news') {
@@ -43,8 +44,8 @@ if (!isset($_GET['menu']) || $_GET['menu'] == 'home') {
     include("pages/register.php");
 } else if ($_GET['menu'] == 'login') {
     include("pages/login.php");
-} else if ($_GET['menu'] == 'admin') {
-    include("pages/admin.php");
+} else if ($_GET['menu'] == 'logout') {
+    include("pages/logout.php");
 }
 print '        
 </main>';

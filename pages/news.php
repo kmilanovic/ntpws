@@ -5,7 +5,7 @@ print '
 <div class="card__wrap--outer">
 <div class="card__wrap--inner">
     <div class="card">
-        <a href="#"><img src="assets/img/news1.jpg"></a>
+        <a href="pages/article1.html"><img src="assets/img/news1.jpg"></a>
         <div class="card__item">
             <h2>Match report: Arsenal 2-0 Leeds</h2>
         </div>
@@ -18,14 +18,14 @@ print '
                 challenge of Leeds.</small>
         </div>
         <div class="card__footer">
-            <a class="pull" href="#"><small>Read more</small></a>
+            <a class="pull" href="pages/article1.html"><small>Read more</small></a>
         </div>
     </div>
 </div>
 
 <div class="card__wrap--inner">
     <div class="card">
-    <a href="#"><img src="assets/img/news2_1.jpg"></a>
+    <a href="pages/article2.html"><img src="assets/img/news2_1.jpg"></a>
         <div class="card__item">
             <h2>Behind the scenes at the academy photocall</h2>
         </div>
@@ -38,14 +38,14 @@ print '
                 season.</small>
         </div>
         <div class="card__footer">
-            <a class="pull" href="#"><small>Read more</small></a>
+            <a class="pull" href="pages/article2.html"><small>Read more</small></a>
         </div>
     </div>
 </div>
 
 <div class="card__wrap--inner">
     <div class="card">
-    <a href="#"><img src="assets/img/news3_1.jpg"></a>
+    <a href="pages/article3.html"><img src="assets/img/news3_1.jpg"></a>
         <div class="card__item">
             <h2>Arteta on Chambers, Nketiah, White\'s fitness</h2>
         </div>
@@ -57,14 +57,14 @@ print '
                 settle our tie with Leeds on Tuesday night.</small>
         </div>
         <div class="card__footer">
-            <a class="pull" href="#"><small>Read more</small></a>
+            <a class="pull" href="pages/article3.html"><small>Read more</small></a>
         </div>
     </div>
 </div>
 
 <div class="card__wrap--inner">
     <div class="card">
-    <a href="#"><img src="assets/img/news4_1.jpg"></a>
+    <a href="pages/article4.html"><img src="assets/img/news4_1.jpg"></a>
         <div class="card__item">
             <h2>Arsenal Supporting Supporters: JNF</h2>
         </div>
@@ -77,14 +77,14 @@ print '
                 part of the Arsenal Supporting Supporters series.</small>
         </div>
         <div class="card__footer">
-            <a class="pull" href="#"><small>Read more</small></a>
+            <a class="pull" href="pages/article4.html"><small>Read more</small></a>
         </div>
     </div>
 </div>
 
 <div class="card__wrap--inner">
     <div class="card">
-    <a href="#"><img src="assets/img/news5_1.jpg"></a>
+    <a href="pages/article5.html"><img src="assets/img/news5_1.jpg"></a>
         <div class="card__item">
             <h2>Heath - It\'s easy with \'cerebral\' Miedema</h2>
         </div>
@@ -96,7 +96,7 @@ print '
                 Heath as she scored her first goal in Arsenal colours.</small>
         </div>
         <div class="card__footer">
-            <a class="pull" href="#"><small>Read more</small></a>
+            <a class="pull" href="pages/article5.html"><small>Read more</small></a>
         </div>
     </div>
 </div>

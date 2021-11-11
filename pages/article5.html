@@ -7,7 +7,7 @@
     <meta name="keywords" content="ključna riječ1, ključna riječ2" />
     <meta name="author" content="Kristijan Milanović" />
     <meta name="viewport" content="width=device-width, inital-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -18,33 +18,35 @@
       <div class="hero-image"></div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="../index.php?menu=home">Home</a></li>
+          <li><a href="../index.php?menu=news">News</a></li>
+          <li><a href="../index.php?menu=contact">Contact</a></li>
+          <li><a href="../index.php?menu=about">About</a></li>
+          <li><a href="../index.php?menu=gallery">Gallery</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <h1>Heath - It's easy with ‘cerebral’ Miedema</h1>
-      <figure id="galleryFigure">
-        <a target="_blank" href="assets/img/news5_1.jpg">
-          <img/img src="assets/img/news5_1.jpg" alt="Goal celebration"
-          width="600" height="400">
-        </a>
-        <figcaption>Goal celebration</figcaption>
-      </figure>
+      <div class="gallery">
+        <figure id="galleryFigure">
+          <a target="_blank" href="../assets/img/news5_1.jpg">
+            <img/img src="../assets/img/news5_1.jpg" alt="Goal celebration"
+            width="600" height="400">
+          </a>
+          <figcaption>Goal celebration</figcaption>
+        </figure>
+      </div>
 
-      <figure id="galleryFigure">
-        <a target="_blank" href="assets/img/news5_2.jpg">
-          <img/img src="assets/img/news5_2.jpg" alt="JVivianne Miedema"
-          width="600" height="400">
-        </a>
-        <figcaption>Vivianne Miedema</figcaption>
-      </figure>
-
-      <hr />
+      <div class="gallery">
+        <figure id="galleryFigure">
+          <a target="_blank" href="../assets/img/news5_2.jpg">
+            <img/img src="../assets/img/news5_2.jpg" alt="JVivianne Miedema"
+            width="600" height="400">
+          </a>
+          <figcaption>Vivianne Miedema</figcaption>
+        </figure>
+      </div>
       <h2>
         Our 4-0 victory over Hoffenheim proved to be a special night for Tobin
         Heath as she scored her first goal in Arsenal colours.
@@ -76,12 +78,11 @@
       </p>
       <p>
         Izvor:
-        <a
-          href="https://www.arsenal.com/news/heath-its-easy-cerebral-miedema"
+        <a href="https://www.arsenal.com/news/heath-its-easy-cerebral-miedema"
           >Arsenal.com</a
         >
       </p>
-      <p><a href="news.html">Back to news</a></p>
+      <p><a href="../index.php?menu=news">Back to news</a></p>
     </main>
     <p>
       Social media:<br />
