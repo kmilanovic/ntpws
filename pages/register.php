@@ -61,7 +61,7 @@ if ($_POST['_action_'] == FALSE) {
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-    if ($row['email'] == '' || $row['username'] == '') {
+    if (!is_array($row)) {
       # password_hash() creates a new password hash using a strong one-way hashing algorithm
       $pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 12]);
       
