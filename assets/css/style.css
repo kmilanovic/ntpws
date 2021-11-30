@@ -219,7 +219,7 @@ small {
   overflow: hidden;
 }
 
-/*Card Flex Code*/
+/*Card Flex*/
 
 .card {
   display: flex;
@@ -254,4 +254,31 @@ small {
 
 .flexible {
   flex-grow: 1;
+}
+
+/*Table*/
+
+h4{
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0 10px 0;
+}
+#table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#table td, #table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f00000;
+  color: white;
 }

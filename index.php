@@ -46,6 +46,8 @@ if (!isset($_GET['menu']) || $_GET['menu'] == 'home') {
     include("pages/login.php");
 } else if ($_GET['menu'] == 'logout') {
     include("pages/logout.php");
+} else if($_GET['menu'] == 'table'){
+    include("pages/table.php");
 }
 print '        
 </main>';
