@@ -8,7 +8,7 @@
 	$counter = 0;
 ?>
 <div class="container">
-<h4>Premier League<small> 2021/2022</small></h4>
+<h1 class="tableName">Premier League 2021/2022</h1>
 <table id="table">
 		<tr>
 			<th>Position</th>

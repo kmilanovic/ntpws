@@ -261,10 +261,8 @@ small {
 
 /*Table*/
 
-h4{
-  width: 50%;
-  margin: 0 auto;
-  padding: 10px 0 10px 0;
+.tableName{
+  text-align: center;
 }
 #table {
   font-family: Arial, Helvetica, sans-serif;
