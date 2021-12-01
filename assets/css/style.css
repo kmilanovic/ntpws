@@ -164,10 +164,13 @@ iframe {
 
 /*About*/
 
+.about{
+  margin: auto;
+}
 video {
   margin: 0 0.5em 0 1em;
   float: left;
-  width: 40%;
+  width: 320;
   height: auto;
 }
 
