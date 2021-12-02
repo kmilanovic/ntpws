@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 01, 2021 at 12:14 PM
+-- Generation Time: Dec 02, 2021 at 01:36 PM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -289,6 +289,54 @@ INSERT INTO `countries` (`id`, `country_code`, `country_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `news`
+--
+
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) COLLATE utf8mb4_croatian_ci NOT NULL,
+  `description` text COLLATE utf8mb4_croatian_ci NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `is_approved` int(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_croatian_ci;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`id`, `title`, `description`, `date`, `is_approved`) VALUES
+(2, 'Match report: Arsenal 2-0 Leeds', ' We booked our place in the quarter-finals of the Carabao Cup after\r\n        second half goals from Calum Chambers and Eddie Nketiah saw off the\r\n        challenge of Leeds.', '2021-12-02 01:55:12', 1),
+(4, 'Behind the scenes at the academy photocall', '  After Under-18s slipped to their first league defeat of the season on\r\n        Saturday they posed for their official team photos for the 2021/22\r\n        season.\r\n\r\n  Youngsters have the chance to bounce back on Saturday when they host\r\n        Crystal Palace at London Colney. The game is set to kick-off at 11am (UK\r\n        time).\r\n\r\n  Under-23s returned to winning ways in the Premier League 2 on Friday\r\n        night as they ran out 4-0 winners over Everton at Meadow Park. They also\r\n        posed for their official team photos for the 2021/22 season.', '2021-12-02 01:04:00', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pictures`
+--
+
+DROP TABLE IF EXISTS `pictures`;
+CREATE TABLE IF NOT EXISTS `pictures` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) COLLATE utf8mb4_croatian_ci NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_croatian_ci NOT NULL,
+  `newsId` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_foreign_key_news` (`newsId`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_croatian_ci;
+
+--
+-- Dumping data for table `pictures`
+--
+
+INSERT INTO `pictures` (`id`, `description`, `img`, `newsId`) VALUES
+(2, 'dd', '2-62.jpg', 2),
+(4, 'U-18', '4-18.jpg', 4);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -304,19 +352,29 @@ CREATE TABLE IF NOT EXISTS `users` (
   `dob` date NOT NULL,
   `username` varchar(255) COLLATE utf8mb4_croatian_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_croatian_ci NOT NULL,
+  `role` varchar(255) COLLATE utf8mb4_croatian_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_croatian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_croatian_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `country`, `city`, `street`, `dob`, `username`, `password`) VALUES
-(1, 'Kristijan', 'MilanoviÄ‡', 'kristijan.milanovic1@gmail.com', 'Albania', 'NaÅ¡ice', 'Matije Gupca 5, Velimirovac', '2021-11-02', 'kile', '$2y$12$GP1RwXV/ah6C02JfhGBjvuum6OKVfM0mXCGvxYF3387buSyTki3se'),
-(2, 'Kristijan', 'MilanoviÄ‡', 'kristijan.milanovic2@gmail.com', 'Azerbaijan', 'NaÅ¡ice', 'Matije Gupca 5, Velimirovac', '2021-11-16', 'kile2', '$2y$12$ss3woLvlfJVJcPCltgP1ZeMQvJxd5g7WSIvE9ugvy4kabKbBYYdtO'),
-(3, 'Kristijan', 'MilanoviÄ‡', 'kristijan.milanovic3@gmail.com', 'Azerbaijan', 'NaÅ¡ice', 'Matije Gupca 5, Velimirovac', '2021-11-02', 'sta', '$2y$12$6HrgyIhkVDVGfEiKA1cbMOQ6vYzSbyt4ECuZkvhZvFZatPw.Nb/8e'),
-(4, 'Kristijan', 'MilanoviÄ‡', 'kristijan.milanovic123@gmail.com', 'Belarus', 'NaÅ¡ice', 'Matije Gupca 5, Velimirovac', '2021-11-18', 'staaa', '$2y$12$6vKBeB990U22CemYND3EAexNOB7gvCjGT0bRRgOe.GF3urMpnfSje'),
-(5, 'Kristijan', 'MilanoviÄ‡', 'kristijan.milanovic2222@gmail.com', 'Angola', 'NaÅ¡ice', 'Matije Gupca 5', '2021-12-02', 'ssss', '$2y$12$zTX6RQUKBAjfrddWNqpYBOT4sw1.1fCK4ETkyzyx1UHQu9Qwv86Pi');
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `country`, `city`, `street`, `dob`, `username`, `password`, `role`) VALUES
+(12, 'Admin', 'Admin', 'admin@gmail.com', 'KI', 'Test City', 'Test Street', '2021-12-14', 'admin', '$2y$12$XxKJiZcOGeH8SbqU8ZsPBeSdZIhBo0F4jGO0ALpxBjlFl9dobrd1K', 'administrator'),
+(19, 'Editor', 'Editor', 'editor@gmail.com', 'GI', 'Editor City', 'Editor Street', '2021-12-20', 'editor', '$2y$12$VHu0Y4oS7DxytZx.UWHjiuYlfGcEf/BhU/w/ulCZI.3En6AYCM5vy', 'editor'),
+(20, 'User', 'User', 'user@gmail.com', 'ZA', 'User City', 'User Street', '2021-12-21', 'user', '$2y$12$8y40t/qmVtdvTS9DUnn8nu8xG3KuyWdNHZPv7TOhyZHfA1BdlRJ4e', 'user'),
+(21, 'Test', 'Test', 'test@gmail.com', 'EE', 'Test City', 'Test Street', '2000-01-10', 'test', '$2y$12$EAv16C95..SvYEwLfq8LCuYO8Jt9PAPF0UpQCPNHeKp/ahs3NrVsO', 'administrator');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `pictures`
+--
+ALTER TABLE `pictures`
+  ADD CONSTRAINT `fk_foreign_key_news` FOREIGN KEY (`newsId`) REFERENCES `news` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
