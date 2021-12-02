@@ -6,7 +6,7 @@ print '
 if ($_POST['_action_'] == FALSE) {
   print '
       <div class="form">
-        <form action="" method="POST">
+        <form action="" id="register_form" name="register_form" method="POST">
         <input type="hidden" id="_action_" name="_action_" value="TRUE">
           <label for="fname">First Name</label>
           <input type="text" id="fname" name="firstname" placeholder="Your first name" required/>
@@ -22,12 +22,12 @@ if ($_POST['_action_'] == FALSE) {
           <div class="select">
             <select class="countries" name="country" required>
               <option value="">Select country</option>';
-              $query = "SELECT country_name FROM countries";
+              $query = "SELECT * FROM countries";
               $records = mysqli_query($conn, $query);  
 
               while($data = mysqli_fetch_array($records))
               {
-                  echo "<option value='". $data['country_name'] ."'>" .$data['country_name'] ."</option>"; 
+                  echo "<option value='". $data['country_code'] ."'>" .$data['country_name'] ."</option>"; 
               }
               mysqli_close($conn);  
           print '
@@ -65,8 +65,8 @@ if ($_POST['_action_'] == FALSE) {
       # password_hash() creates a new password hash using a strong one-way hashing algorithm
       $pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 12]);
       
-      $query  = "INSERT INTO users (firstname, lastname, email, country, city, street, dob, username, password)";
-      $query .= " VALUES ('" . $_POST['firstname'] . "', '" . $_POST['lastname'] . "', '" . $_POST['email'] . "', '" . $_POST['country'] . "', '" . $_POST['city'] . "', '" . $_POST['street'] . "', '" . $_POST['dob'] . "', '" . $_POST['username'] . "', '" . $pass_hash . "')";
+      $query  = "INSERT INTO users (firstname, lastname, email, country, city, street, dob, username, password, role)";
+      $query .= " VALUES ('" . $_POST['firstname'] . "', '" . $_POST['lastname'] . "', '" . $_POST['email'] . "', '" . $_POST['country'] . "', '" . $_POST['city'] . "', '" . $_POST['street'] . "', '" . $_POST['dob'] . "', '" . $_POST['username'] . "', '" . $pass_hash . "', '" . 'user' . "')";
       $result = mysqli_query($conn, $query);
       
       # ucfirst() — Make a string's first character uppercase
