@@ -199,7 +199,7 @@
 						<th>Title</th>
 						<th>Description</th>
 						<th>Date</th>';
-						$query  = "SELECT * FROM news WHERE is_approved='0'";
+						$query  = "SELECT * FROM news WHERE is_approved='1'";
 						$query .= " ORDER BY date DESC";
 						$result = @mysqli_query($conn, $query);
 						while($row = @mysqli_fetch_array($result)) {
