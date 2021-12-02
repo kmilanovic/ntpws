@@ -3,8 +3,8 @@
   <nav>
     <ul>
       <?php
-      $nav_menu = array('home', 'news', 'contact', 'about', 'gallery', 'register', 'login', 'table');
-      $nav_menu_admin = array('home', 'news', 'contact', 'about', 'gallery', 'admin', 'logout', 'table');
+      $nav_menu = array('home', 'news', 'contact', 'about', 'gallery', 'register', 'login', 'table-api');
+      $nav_menu_admin = array('home', 'news', 'contact', 'about', 'gallery', 'admin', 'logout', 'table-api');
       
       if (!isset($_SESSION['user']['valid']) || $_SESSION['user']['valid'] == 'false') {
         for ($i = 0; $i < count($nav_menu); $i++) {
