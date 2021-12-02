@@ -3,9 +3,6 @@
 	$leagueTable = file_get_contents("https://api.footystats.org/league-tables?key=b42b53430800c32734c30c6965e6ff689ece089a51381a586f09d84d35cd3ffa&league_id=6135");
 	$leagueTable = json_decode($leagueTable, true);
 	$leagueTable = $leagueTable['data']['league_table'];
-
-	$limit = 20;
-	$counter = 0;
 ?>
 <div class="container">
 <h1 class="tableName">Premier League 2021/2022</h1>
@@ -54,4 +51,4 @@
 		</tr>
 		<?php endforeach ?>
 </table>
-</div>
+
