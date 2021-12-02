@@ -177,6 +177,14 @@ video {
 
 /*News*/
 
+.description {
+  display: block;
+  width: 30em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 small {
   font-size: 14px;
 }
